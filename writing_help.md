@@ -16,6 +16,20 @@ SPLITS AND TERMINAL
 Ctrl-w w                 cycle between splits (mouse click also works)
 Ctrl-d                   close terminal and reclaim the window
 
+3-PANE LAYOUT — chapter left, help top-right, terminal bottom-right
+:vsplit ~/.vim/writing_help.md    left | right
+Ctrl-w w                          move to right pane
+:split                            split right pane top/bottom
+Ctrl-w w                          move to bottom-right
+:terminal                         terminal in bottom-right
+
+3-PANE LAYOUT — chapter top-left, help top-right, terminal full-width bottom
+:split                            top | bottom
+Ctrl-w w                          move to bottom
+:terminal                         terminal full width bottom
+Ctrl-w w                          back to top
+:vsplit ~/.vim/writing_help.md    split top pane left/right
+
 VIM COMMANDS
 ---------------  ----------------------------------------
 TOOLS
