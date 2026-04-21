@@ -32,6 +32,17 @@ Ctrl-w w                          back to top
 
 VIM COMMANDS
 ---------------  ----------------------------------------
+FILE NAVIGATION (fzf)
+\f               fuzzy find file — start typing filename
+\b               fuzzy find open buffer
+
+GIT (vim-fugitive)
+\gs              git status
+\gd              git diff
+\gb              git blame
+\gc              git commit
+                 vim-gitgutter shows +/~/- in gutter automatically
+
 TOOLS
 :ALEToggle       vendors on/off
 :ALELint         run linters manually
