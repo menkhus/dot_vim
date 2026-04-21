@@ -20,6 +20,10 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'           " Async linting — runs all prose tools
   Plug 'junegunn/goyo.vim'            " Distraction-free writing mode
   Plug 'junegunn/limelight.vim'       " Focus on current paragraph
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'             " Fuzzy file finder
+  Plug 'tpope/vim-fugitive'           " Git inside vim
+  Plug 'airblade/vim-gitgutter'       " Git changes in gutter
 
 call plug#end()
 
@@ -158,6 +162,21 @@ nnoremap <Leader>w :w<CR>
 
 " Open this vimrc
 nnoremap <Leader>v :e ~/.vimrc<CR>
+
+" ALE completion (language servers)
+let g:ale_completion_enabled = 1
+set omnifunc=ale#completion#OmniFunc
+
+" fzf — fuzzy file finder
+set rtp+=/usr/local/opt/fzf
+nnoremap <Leader>f :Files<CR>
+nnoremap <Leader>b :Buffers<CR>
+
+" vim-fugitive — git
+nnoremap <Leader>gs :Git status<CR>
+nnoremap <Leader>gd :Git diff<CR>
+nnoremap <Leader>gb :Git blame<CR>
+nnoremap <Leader>gc :Git commit<CR>
 
 " Run prose_check.py on current file (from project root)
 nnoremap <Leader>p :!python assembly/prose_check.py %<CR>

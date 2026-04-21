@@ -1,8 +1,34 @@
 WRITING SURFACE — VIM HELP
 ==========================
 
+INSTALL (new machine)
+~/.vim/install.sh            run once — installs everything below
+vim then :PlugInstall         install vim plugins after running script
+
+PLUGINS
+ale              async linting — prose and code
+goyo             distraction-free mode
+limelight        paragraph focus (auto inside Goyo)
+fzf + fzf.vim    fuzzy file finder
+vim-fugitive     git inside vim
+vim-gitgutter    git changes shown in gutter
+
+LANGUAGE SERVERS (autocomplete via Ctrl-x Ctrl-o in insert mode)
+python-lsp-server          Python
+typescript-language-server TypeScript / JavaScript
+clangd (via llvm)          C / C++
+sourcekit-lsp              Swift (comes with Xcode, no install needed)
+
+PROSE LINTERS (via ALE — toggle with :ALEToggle)
+markdownlint     markdown rules
+vale             style guide enforcement
+proselint        prose quality
+write-good       passive voice, weasel words
+aspell           spell check
+
+==========================
 START SESSION
-vim ch01_ordinary_world.md writing_surface_in_vim_help.md   open both
+vim ch01_ordinary_world.md ~/.vim/writing_help.md   open both
 :b#                                          toggle between buffers
 :b ch01                                      switch by partial name
 
