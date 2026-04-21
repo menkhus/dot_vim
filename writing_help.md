@@ -29,6 +29,8 @@ aspell           spell check
 ==========================
 START SESSION
 vim ch01_ordinary_world.md ~/.vim/writing_help.md   open both
+vim ch00_prologue.md ch01_ordinary_world.md ~/.vim/writing_help.md   explicit is better
+NOTE: globs (ch0*) can confuse vim buffer loading — name files explicitly
 :b#                                          toggle between buffers
 :b ch01                                      switch by partial name
 
