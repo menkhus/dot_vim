@@ -34,6 +34,7 @@ curl -L https://raw.githubusercontent.com/words/moby/master/words.txt \
 
 echo "==> Copying vimrc..."
 cp ~/.vim/.vimrc ~/.vimrc
+cp ~/.vim/.gvimrc ~/.gvimrc
 
 echo ""
 echo "Done. Now open vim and run:  :PlugInstall"
