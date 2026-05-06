@@ -36,6 +36,11 @@ echo "==> Copying vimrc..."
 cp ~/.vim/.vimrc ~/.vimrc
 cp ~/.vim/.gvimrc ~/.gvimrc
 
+echo "==> Adding mvim alias to ~/.zshrc..."
+if ! grep -q 'servername MARKSVIM' ~/.zshrc; then
+  echo '\nalias mvim="mvim --servername MARKSVIM"' >> ~/.zshrc
+fi
+
 echo ""
 echo "Done. Now open vim and run:  :PlugInstall"
 echo "Then restart vim."
